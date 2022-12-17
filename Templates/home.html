@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('Templates', path='/styles.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('Templates', path='/libs/bootstrap/css/bootstrap.min.css') }}" />
+
+    <title>Stable Diffusion</title>
+</head>
+
+<body>
+    <canvas id="background"></canvas>
+    <div id="content" class="container">
+        <div class="jumbotron">
+            <form id="form" class="row">
+                <table>
+                    <tr>
+                        <td><label for="prompt">Enter your prompt:</label></td>
+                        <td><input id="prompt" type="text" name="prompt" required /></td>
+                    </tr>
+                </table>
+                <button id="submitButton" type="submit" class="ml-2 btn btn-primary btn-lrg">Generate</button>
+                <div id="spinner" class="spinner-border text-info ml-2"></div>
+            </form>
+            <div class="row">
+                <div class="col-xs-6 col-md-3">
+                    <a href="#" class="img-rounded">
+                        <img id="generatedImage" src="">
+                    </a>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ url_for('Templates', path='app.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('Templates', path='/libs/bootstrap/js/bootstrap.min.j') }}s"></script>
+</body>
+
+</html>
